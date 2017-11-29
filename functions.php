@@ -126,6 +126,20 @@ if ( ! function_exists( 'polo_category_widget' ) ) {
         add_action('widgets_init', 'polo_category_widget');
 }
 
+if ( ! function_exists( 'polo_pages_widget' ) ) {
+    
+        function polo_pages_widget() {
+    
+            get_template_part('partials/pages_widget');
+    
+            unregister_widget('WP_Widget_Pages');
+            register_widget('Pages_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_pages_widget');
+}
+
 if ( ! function_exists( 'twentysixteen_fonts_url' ) ) {
     /**
      * Register Google fonts for Twenty Sixteen.

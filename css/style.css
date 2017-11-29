@@ -13653,3 +13653,8 @@ body.device-xs .col-md-3 .flickr-widget img {
 table#wp-calendar {
   width: 100%;
 }
+
+ul.children {
+  list-style: none;
+  padding-left: 15px;
+}
