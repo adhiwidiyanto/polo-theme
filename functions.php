@@ -85,6 +85,19 @@ if ( ! function_exists( 'change_submenu_class' )) {
     add_filter('wp_nav_menu','change_submenu_class'); 
 }
 
+if ( ! function_exists( 'polo_calendar_widget' ) ) {
+    function polo_calendar_widget() {
+
+        get_template_part('partials/calendar_widget');
+
+        unregister_widget('WP_Widget_Calendar');
+        register_widget('Calendar_Widget');
+
+    }
+
+    add_action('widgets_init', 'polo_calendar_widget');
+}
+
 if ( ! function_exists( 'polo_recent_widget' ) ) {
 
     function polo_recent_widget() {
@@ -97,6 +110,20 @@ if ( ! function_exists( 'polo_recent_widget' ) ) {
     }
 
     add_action('widgets_init', 'polo_recent_widget');
+}
+
+if ( ! function_exists( 'polo_category_widget' ) ) {
+    
+        function polo_category_widget() {
+    
+            get_template_part('partials/category_widget');
+    
+            unregister_widget('WP_Widget_Categories');
+            register_widget('Category_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_category_widget');
 }
 
 if ( ! function_exists( 'twentysixteen_fonts_url' ) ) {

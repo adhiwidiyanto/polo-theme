@@ -8325,7 +8325,6 @@ select {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
-  background-image: url(../images/dropdown-arrow.png);
   background-repeat: no-repeat;
   background-position: right center;
   padding: 6px 18px;
@@ -13650,3 +13649,7 @@ body.device-xs .col-md-3 .flickr-widget img {
 
 /*# sourceMappingURL=colors.css.map */
 
+
+table#wp-calendar {
+  width: 100%;
+}
