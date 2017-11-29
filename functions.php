@@ -18,6 +18,12 @@ if( ! function_exists('polo_theme_setup') ) {
         add_theme_support( 'menus' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'post-formats', array( 'gallery', 'link', 'quote', 'aside') );
+
+        register_nav_menus(
+            array(
+                'main_menu' => 'Header Menu'
+            )
+        );
    }
 
    add_action('after_setup_theme', 'polo_theme_setup');
@@ -53,6 +59,16 @@ if ( ! function_exists( 'remove_admin_bar' ) ) {
     }
     add_action('after_setup_theme', 'remove_admin_bar');
 }
+
+if ( ! function_exists( 'change_submenu_class' )) {
+    
+    function change_submenu_class($menu) {
+        $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown-menu" /',$menu);
+        return $menu;
+    }
+
+    add_filter('wp_nav_menu','change_submenu_class'); 
+} 
 
 function wpbeginner_numeric_posts_nav() {
  
