@@ -1,7 +1,10 @@
 <div class="sidebar col-md-3">
-    <div class="widget ">
-        <div>
-        <h4 class="widget-title">Recent Posts</h4>
+        <?php 
+            if( is_active_sidebar( 'polo_sidebar' ) ) {
+                dynamic_sidebar( 'polo_sidebar' );
+            }
+        ?>
+        <!-- <h4 class="widget-title">Recent Posts</h4>
                                 <div class="post-thumbnail-list">
                                     <div class="post-thumbnail-entry">
                                         <img alt="" src="images/blog/thumbnail/5.jpg">
@@ -27,7 +30,5 @@
                                             <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
                                         </div>
                                     </div>
-                                </div>
-        </div>
-    </div>
+                                </div> -->
 </div>

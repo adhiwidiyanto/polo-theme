@@ -17,9 +17,7 @@
                         <a href="#" class="logo"> LOGO </a>
                     </div>
                     <div id="top-search">
-                        <form action="search-results-page.html" method="get">
-                            <input type="text" name="q" class="form-control" value="" placeholder="Start typing & press  &quot;Enter&quot;">
-                        </form>
+                        <?php get_template_part('searchform') ?>
                     </div>
 
                     <div class="header-extras">
@@ -32,16 +30,8 @@
                                 </a>
                                 <!--end: top search-->
                             </li>
-                            <li class="hidden-xs">
-                                <!--shopping cart-->
-                                <div id="shopping-cart">
-                                    <a href="shop-cart.html">
-                                        <span class="shopping-cart-items">8</span>
-
-                                        <i class="fa fa-shopping-cart"></i></a>
-                                </div>
-                                <!--end: shopping cart-->
-                            </li></ul>
+                            </li>
+                        </ul>
                     </div>
 
                     <div id="mainMenu-trigger">
@@ -49,24 +39,18 @@
                     </div>
 
                     <div id="mainMenu">
-                        <div class="container">
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Home</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+              
+                            <?php 
+                                wp_nav_menu( 
+                                    array( 
+                                        'theme_location' => 'main_menu' ,
+                                        'echo' => true,
+                                        'container' => 'nav',
+                                        'depth' => 2
+                                    ) 
+                                );
+                            
+                            ?>
                     </div>
                 </div>
             </div>
