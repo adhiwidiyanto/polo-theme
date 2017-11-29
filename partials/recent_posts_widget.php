@@ -19,7 +19,7 @@ class Recent_Post_Widget extends WP_Widget_Recent_Posts {
 				<?php while( $r->have_posts() ) : $r->the_post(); ?>				
 				<li>
                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-                    <small><?php the_time( 'F d'); ?> -</small>
+                    <small><?php the_time( 'F jS, Y'); ?> </small>
                 </li>
 				<?php endwhile; ?>
 			</ul>
