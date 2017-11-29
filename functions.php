@@ -34,7 +34,7 @@ if( ! function_exists('polo_theme_css')) {
 
         wp_enqueue_style('polo-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,80');
         wp_enqueue_style('polo-plugins-css', $css . 'plugins.css');
-        wp_enqueue_style('polo-style', get_stylesheet_uri());
+        wp_enqueue_style('polo-style', $css . 'style.css');
         wp_enqueue_style('polo-responsive', $css . 'responsive.css');
 
         wp_enqueue_script('polo-jquery', $js . 'jquery.js', array(), '1.0.0', true);
