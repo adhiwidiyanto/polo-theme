@@ -54,3 +54,87 @@ if ( ! function_exists( 'polo_pages_widget' ) ) {
     
         add_action('widgets_init', 'polo_pages_widget');
 }
+
+if ( ! function_exists( 'polo_search_widget' ) ) {
+    
+        function polo_search_widget() {
+    
+            get_template_part('partials/widget/search_widget');
+    
+            unregister_widget('WP_Widget_Search');
+            register_widget('Search_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_search_widget');
+}
+
+if ( ! function_exists( 'polo_media_audio_widget' ) ) {
+    
+        function polo_media_audio_widget() {
+    
+            get_template_part('partials/widget/media_audio_widget');
+    
+            unregister_widget('WP_Widget_Media_Audio');
+            register_widget('Media_Audio_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_media_audio_widget');
+}
+
+if ( ! function_exists( 'polo_media_video_widget' ) ) {
+    
+        function polo_media_video_widget() {
+    
+            get_template_part('partials/widget/media_video_widget');
+    
+            unregister_widget('WP_Widget_Media_Video');
+            register_widget('Media_Video_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_media_video_widget');
+}
+
+if ( ! function_exists( 'polo_media_image_widget' ) ) {
+    
+        function polo_media_image_widget() {
+    
+            get_template_part('partials/widget/media_image_widget');
+    
+            unregister_widget('WP_Widget_Media_Image');
+            register_widget('Media_Image_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_media_image_widget');
+}
+
+if ( ! function_exists( 'polo_media_gallery_widget' ) ) {
+    
+        function polo_media_gallery_widget() {
+    
+            get_template_part('partials/widget/media_gallery_widget');
+    
+            unregister_widget('WP_Widget_Media_Gallery');
+            register_widget('Media_Gallery_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_media_gallery_widget');
+}
+
+if ( ! function_exists( 'polo_archives_widget' ) ) {
+    
+        function polo_archives_widget() {
+    
+            get_template_part('partials/widget/archives_widget');
+    
+            unregister_widget('WP_Widget_Archives');
+            register_widget('Archives_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_archives_widget');
+}
