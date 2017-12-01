@@ -13,9 +13,9 @@ if ( ! function_exists( 'polo_calendar_widget' ) ) {
     add_action('widgets_init', 'polo_calendar_widget');
 }
 
-if ( ! function_exists( 'polo_recent_widget' ) ) {
+if ( ! function_exists( 'polo_recent_posts_widget' ) ) {
 
-    function polo_recent_widget() {
+    function polo_recent_posts_widget() {
 
         get_template_part('partials/widget/recent_posts_widget');
 
@@ -138,3 +138,31 @@ if ( ! function_exists( 'polo_archives_widget' ) ) {
     
         add_action('widgets_init', 'polo_archives_widget');
 }
+
+if ( ! function_exists( 'polo_tags_cloud_widget' ) ) {
+    
+        function polo_tags_cloud_widget() {
+    
+            get_template_part('partials/widget/tags_cloud_widget');
+    
+            unregister_widget('WP_Widget_Tag_Cloud');
+            register_widget('Tags_Cloud_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_tags_cloud_widget');
+}
+
+if ( ! function_exists( 'polo_recent_comments_widget' ) ) {
+    
+        function polo_recent_comments_widget() {
+    
+            get_template_part('partials/widget/recent_comments_widget');
+    
+            unregister_widget('WP_Widget_Recent_Comments');
+            register_widget('Recent_Comments_Widget');
+    
+        }
+    
+        add_action('widgets_init', 'polo_recent_comments_widget');
+    }
